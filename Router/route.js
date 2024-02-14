@@ -36,5 +36,8 @@ router.get('/project/home-projects',projectController.getHomeProjects)
 //7 update project route - localhost:4000/project/update-project/78289678994
 router.put('/project/update-project/:id',jwtMiddleware,multerConfig.single('projectImage'),projectController.editProject)
 
+//8 delete project route - iocalhost:4000/projects/delete-project/78615841204
+router.delete('/project/delete-project/:pid',jwtMiddleware,projectController.deleteProject)
+
 
 module.exports = router
